@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,13 +12,23 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    return view('index');
-});
+    $postList = Post::all();
+
+    return view('index',compact('postList'));
+})->name('index');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('index');
 Route::get('/about', 'HomeController@about')->name('about');
-Route::get('/post', 'HomeController@post')->name('post');
+Route::get('/admin','UserController@index')->name('user');
+
+// Admin home ve post home daha sonra ayrılacak!!!
+Route::group(['prefix' => 'admin/post','middleware' => ['auth']], function (){
+    Route::get('/', function (){
+        return view('admin.home');
+    })->name('post.index');
+
+    Route::get('create','PostController@create');
+    Route::get('all','PostController@index');
+    Route::get('edit','PostController@edit');
+});

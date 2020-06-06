@@ -18,4 +18,3 @@ function toggleNav(){
     }
     return closeNav();
 }
-
