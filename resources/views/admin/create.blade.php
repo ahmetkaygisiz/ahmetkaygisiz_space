@@ -1,35 +1,51 @@
 @extends('layouts.user')
 @section('content')
+
 <!-- Main Content -->
 <div class="container" style="padding-top: 30px">
-    <form>
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li> {{ $error }}</li>
+                @endforeach
+            </ul>
+        </div> <br />
+    @endif
+
+    <form method="post" action="{{ route('post.store') }}">
+         @csrf
         <div class="form-group">
-            <label for="exampleFormControlInput1">Title</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" name="title">
         </div>
         
         <div class="form-group">
-            <label for="exampleFormControlInput1">Subtitle</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <label for="subtitle">Subtitle</label>
+            <input type="text" class="form-control" id="subtitle" name="subtitle">
         </div>
         
         <div class="form-group">
-            <label for="options1">Category</label>
-            <select class="form-control">
-                <option id="exampleOption">Categories</option>
+            <label for="category_id">Category</label>
+            <select class="form-control" id="category_id" name="category_id">
+                @foreach($categories as $category)
+                  <li>
+                    <option value="{{$category->id}}">{{$category->name}}</option>
+                  </li>
+                @endforeach
             </select>
         </div>
        
         <div class="form-group">
-            <label for="editor">Example textarea</label>
+            <label for="editor">Post Content</label>
             <textarea name="content" id="editor">
                <p>Test felan</p>
             </textarea>
-            
         </div>
 
-        <button class="btn btn-success" action="submit">Kesin bilgi yayalım...</button>
+        <button class="btn btn-success" type="submit" style="">Kesin bilgi yayalım...</button>
     </form>
 </div>
+
 @endsection
 

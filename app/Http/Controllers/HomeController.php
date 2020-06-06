@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,7 +11,18 @@ class HomeController extends Controller
     }
     
     public function about()
-    {
+    {   
+        // $to_name = "Test";
+        // $to_email = "ahmetkaygisiz17@gmail.com";
+
+        // $data = array('name'=>'tsdfs', 'body' => 'A test mail');
+        
+        // Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
+        
+        // $message->to($to_email, $to_name)->subject('Laravel Test Mail');
+        // $message->from('SENDER_EMAIL_ADDRESS','Test Mail');
+        // });
+
         return view('about');
     }
 

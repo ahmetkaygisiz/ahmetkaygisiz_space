@@ -42,7 +42,7 @@
                         <a href="{{ url('/admin/post/create') }}" style="font-size: small; color:burlywood">Oluştur</a>
                     </li>
                     <li>
-                        <a href="{{ url('/admin/post/all') }}" style="font-size: small; color:burlywood;">Listele</a>
+                        <a href="{{ url('/admin/post/') }}" style="font-size: small; color:burlywood;">Listele</a>
                     </li>
                   </ul>
                 </li>
@@ -78,7 +78,7 @@
       <!-- Footer -->
       <footer>
         <div class="container">
-            <p>Copyright &copy; Your Website 2019</p>
+            <p>Copyright &copy; ahmetkaygisiz.space 2020</p>
         </div>
       </footer>
     </div>

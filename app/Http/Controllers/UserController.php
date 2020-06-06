@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class UserController extends Controller
 {
@@ -12,7 +13,9 @@ class UserController extends Controller
     }
 
     public function index()
-    {
-        return view('admin/home');
+    {  
+        $posts = Post::all();
+
+        return view('admin.home',compact('posts'));
     }
 }
