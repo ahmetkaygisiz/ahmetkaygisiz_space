@@ -24,14 +24,14 @@
     
     <div class="contact-form">
         <form action="#">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name..">
         
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <label for="mail">Contant Mail</label>
+            <input type="text" id="mail" name="mail" placeholder="Your mail adress..">
         
             <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <textarea id="subject" name="subject" placeholder="About.." style="height:200px"></textarea>
         
             <input type="submit" value="Submit">
         

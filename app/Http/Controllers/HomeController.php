@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use App\Post;
 
 class HomeController extends Controller
 {
@@ -29,5 +30,13 @@ class HomeController extends Controller
     public function post()
     {
         return view('post');
+    }
+
+    public function showPost($id)
+    {
+        $post = Post::find($id);
+        if(empty($post)) 
+            abort(404);
+        return view('post', compact('post')); 
     }
 }

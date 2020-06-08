@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Post;
+use App\Categories;
+use App\Mail\ContactMail;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,18 +15,22 @@ use App\Post;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Auth::routes();
+
 Route::get('/', function () {
-    $posts = Post::paginate(2);
+    $posts = Post::paginate(5);
 
     return view('index',compact('posts'));
 })->name('index');
 
-Auth::routes();
+Route::get('/category/{id}', 'CategoryController@show')->name('category.show');
+Route::get('/post/{id}', 'HomeController@showPost')->name('home.post');
 Route::get('/about', 'HomeController@about')->name('about');
-Route::get('/admin','UserController@index')->name('user');
+
 
 // Admin home ve post home daha sonra ayrılacak!!!
-
+Route::get('/admin','UserController@index')->name('user');
 Route::resource('/admin/post','PostController');
 
 Route::group(['prefix' => 'admin/post','middleware' => ['auth']], function (){
@@ -32,7 +39,14 @@ Route::group(['prefix' => 'admin/post','middleware' => ['auth']], function (){
 
         return view('admin.home',compact('posts'));
     })->name('post.index');
-
-    Route::get('all','PostController@index')->name('post.all');;
-    Route::get('edit','PostController@edit')->name('post.edit');
 });
+
+// Route::get('send-mail', function () {
+//     $details = [
+//         'title' => 'Mail from ItSolutionStuff.com',
+//         'body' => 'This is for testing email using smtp'
+//     ];
+//     \Mail::to('ahmetkaygisiz17@gmail.com')->send(new \App\Mail\ContactMail($details));
+
+//     dd("Email is Sent.");
+// });

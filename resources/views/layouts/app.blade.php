@@ -46,7 +46,7 @@
                         <ul class="collapse list-unstyled" id="pageSubmenu">
                             @foreach($categories as $category)
                                 <li>
-                                    <a href="#"> {{$category->name}}</a>
+                                    <a href="{{ route('category.show',$category->id)}}">{{$category->name}}</a>
                                 </li>
                             @endforeach
                         </ul>
@@ -81,11 +81,9 @@
     <!-- Content Layout -->
     <div id="main">
       <button id="toggleNavBtn" class="toggle-nav-btn" onclick="toggleNav()"> <b>\-.-/</b></button>
-        @yield('content')
-    </div>    
+       @yield('content')
+    </div>
     <hr>
-    
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>Copyright &copy; ahmetkaygisiz.space 2020</p>

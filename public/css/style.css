@@ -87,7 +87,6 @@ div hr {
 }
 
 .pagination {
-  background-color: #0085A1;
   font-size: 10px;
 }
 
@@ -110,44 +109,62 @@ div hr {
     color: #212529;
   }
   
-  .post-preview > a:focus, .post-preview > a:hover {
-    text-decoration: none;
-    color: #0085A1;
-  }
-  
+.post-preview > a:focus, .post-preview > a:hover {
+  text-decoration: none;
+  color: #0085A1;
+}
+
+.post-preview > a > .post-title {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.post-preview > a > .post-subtitle {
+  font-weight: 300;
+  margin: 0 0 10px;
+}
+
+.post-preview > .post-meta {
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 0;
+  color: #868e96;
+}
+
+.post-preview > .post-meta > a {
+  text-decoration: none;
+  color: #212529;
+}
+
+.post-preview > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
+  text-decoration: underline;
+  color: #0085A1;
+}
+
+@media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {
-    font-size: 30px;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    font-size: 36px;
   }
-  
-  .post-preview > a > .post-subtitle {
-    font-weight: 300;
-    margin: 0 0 10px;
-  }
-  
-  .post-preview > .post-meta {
-    font-size: 18px;
-    font-style: italic;
-    margin-top: 0;
-    color: #868e96;
-  }
-  
-  .post-preview > .post-meta > a {
-    text-decoration: none;
-    color: #212529;
-  }
-  
-  .post-preview > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
-    text-decoration: underline;
-    color: #0085A1;
-  }
-  
-  @media only screen and (min-width: 768px) {
-    .post-preview > a > .post-title {
-      font-size: 36px;
-    }
-  }
+}
+.content {
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+.content h1 {
+  font-family: 'Ubuntu Mono', monospace;
+  color: #45a049;
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.content h4 {
+  font-family: 'Ubuntu Mono', monospace;
+  color: #45a049;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
 
 /** About Me**/
 .bg-1 { 
@@ -174,13 +191,18 @@ div hr {
 }
 
 footer {
-  padding: 15px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   background-color: lightslategrey;
   color: #c6cfc8;
+}
+
+footer p {
   text-align: center;
   font-family: 'Ubuntu Mono', monospace;
 }
-
 /*  Contact Form */
 .contact-form {
   border-radius: 5px;
