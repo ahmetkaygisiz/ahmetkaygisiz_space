@@ -9,20 +9,26 @@
     
     <div class="container-fluid bg-2 text-center">
     <h3>Kimim ben?</h3>
-    <p>.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Selamlar, Ben Ahmet. Kod dünyasına giriş yapmaya çalışan bir Junior'ım.
+         Java ve Linux sevdiğim şeyler arasında. Bu blog içerisinde kendime not şeklinde
+        ilerleyeceğim. Hatalarım mutlaka olacaktır bu sebepte    
+    </p>
     </div>
     <hr>
     
     <div class="container-fluid bg-3 text-center">
     <h3>Neler yaparım?</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..</p>
+    <p>Bir önceki işimde 'Jr. Java Developer & System Support Associate' olarak görev aldım. Uygulama sunucuları ve java ile çalıştım. Ağırlıklı olarak
+        WebLogic ve Scripting üzerinde çalışsam da yoluma sunucular yerine kodlama alanında daha aktif olmak istiyorum. 
+        Python ve Scala üzerine çalışmak istediğim konulardan bazıları. 
+    </p>
     </div>
     <hr>
-    
+        <!--
     <div class="container-fluid bg-3">
     <h3 style="font-family: 'Ubuntu Mono', monospace; text-align: center;">Nasıl ulaşırsınız?</h3>
     
-    <div class="contact-form">
+ <div class="contact-form">
         <form action="#">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your name..">
@@ -36,7 +42,7 @@
             <input type="submit" value="Submit">
         
         </form>
-    </div>
+    </div> -->
     </div>
 </div>
 

@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
+    <link rel="icon" type="image/png" href="{{ asset('imgs/logo.png') }}"/>
+    <title>ahmetkaygisiz.space</title>
 </head>
 
 <body>
@@ -38,9 +40,7 @@
                     </li>   
                     @endif
                     
-                    <li>
-                        <a  href="{{ url('/') }}">Home</a>
-                    </li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
                     <li>
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categories</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
