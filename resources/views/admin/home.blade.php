@@ -27,7 +27,7 @@
                 <td>{{$post->subtitle}}</td>
                 <td>{{$post->created_at}}</td>
                 <td>
-                    <a href="{{ route('post.edit',$post->id)}}" class="btn btn-primary">Edit</a>
+                    <a href="{{ route('post.edit', $post->id)}}" class="btn btn-primary">Edit</a>
                 </td>
                 <td>
                     <form action="{{ route('post.destroy', $post->id)}}" method="post">

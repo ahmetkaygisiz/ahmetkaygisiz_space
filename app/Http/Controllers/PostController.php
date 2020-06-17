@@ -54,7 +54,7 @@ class PostController extends Controller
     {
         $post = Post::find($id);
 
-        return view('post.edit', compact('post')); 
+        return view('admin.edit', compact('post')); 
     }
 
     public function update(Request $request, $id)
