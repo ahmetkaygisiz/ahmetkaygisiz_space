@@ -39,8 +39,8 @@
        
         <div class="form-group">
             <label for="editor">Post Content</label>
-            <textarea name="content" id="editor">
-                <input type="text">{{ $post->content}}</input>
+            <textarea name="content" id="summernote">
+                {{ $post->content}}
             </textarea>
         </div>
 

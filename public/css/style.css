@@ -4,15 +4,55 @@
 }
 
 body {
-    background-color :lightgrey;
+    background-color: lightgrey;
 }
 
 div hr {
-    margin:25px;
+    margin: 25px;
     color: beige;
 }
 
 /** Navigation Bar **/
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+    content: counter(linenumber);
+    color: #999;
+    display: block;
+    padding-right: 0.8em;
+    text-align: right;
+}
 
 .sidenav {
     width: 300px;
@@ -25,39 +65,39 @@ div hr {
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.2s; /* 0.5 second transition effect to slide */
-    font-family: 'Share Tech Mono', monospace;
+    font-family: "Share Tech Mono", monospace;
 }
 
 @media only screen and (max-width: 768px) {
-  .sidenav {
-    width: 150px;
-    height: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(53, 51, 51);
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.2s; /* 0.5 second transition effect to slide */
-    font-family: 'Share Tech Mono', monospace;
-  }
+    .sidenav {
+        width: 150px;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(53, 51, 51);
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.2s; /* 0.5 second transition effect to slide */
+        font-family: "Share Tech Mono", monospace;
+    }
 }
 
 .sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  text-align: center;
-  font-size: 20px;
-  color: #818181 ;
-  display: block;
-  transition: 0.1s;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.1s;
 }
 
 @media only screen and (max-width: 768px) {
-  .sidenav a{
-    padding: 4px 4px 4px 4px;
-  }
+    .sidenav a {
+        padding: 4px 4px 4px 4px;
+    }
 }
 
 .sidenav a:hover {
@@ -73,216 +113,217 @@ div hr {
     padding: 8px 8px 8px 10px;
 }
 
-.social-links svg{
+.social-links svg {
     width: 32px;
     height: 32px;
-    padding-top:5px;
+    padding-top: 5px;
 }
 
-
-.social-links svg:hover{
-    color:#c6cfc8;
+.social-links svg:hover {
+    color: #c6cfc8;
     background-color: rgb(53, 51, 51);
 }
 
-
 #pageSubmenu a {
-  font-size: 15px;
-  padding: 2px 2px 2px 40px;
-  color: #45a049;
+    font-size: 15px;
+    padding: 2px 2px 2px 40px;
+    color: #45a049;
 }
 
 #pageSubmenu a:hover {
-  padding: 2px 2px 2px 40px;
-  color: #0085A1;
+    padding: 2px 2px 2px 40px;
+    color: #0085a1;
 }
 
-@media only screen and (max-width: 768px) { 
-  .social-links a {
-    display: inline-block;
-    padding: 4px 4px 4px 5px;
-  }
+@media only screen and (max-width: 768px) {
+    .social-links a {
+        display: inline-block;
+        padding: 4px 4px 4px 5px;
+    }
 
-  .social-links svg{
-    width: 32px;
-    height: 32px;
-    padding-top:5px;
-  }
-  
-  #pageSubmenu a {
-    font-size: 12px;
-    padding: 2px 2px 2px 15px;
-    color: #45a049;
-  }
-  
-  #pageSubmenu a:hover {
-    padding: 2px 2px 2px 15px;
-    color: #0085A1;
-  }
+    .social-links svg {
+        width: 32px;
+        height: 32px;
+        padding-top: 5px;
+    }
 
+    #pageSubmenu a {
+        font-size: 12px;
+        padding: 2px 2px 2px 15px;
+        color: #45a049;
+    }
+
+    #pageSubmenu a:hover {
+        padding: 2px 2px 2px 15px;
+        color: #0085a1;
+    }
 }
-
 
 #main {
-  margin-left: 300px;
+    margin-left: 300px;
 }
 
 #main .toggle-nav-btn {
-  position: sticky;
-  top: 0;
-  background-color: #ccc;
-  transition-duration: 0.4s;
+    position: sticky;
+    top: 0;
+    background-color: #ccc;
+    transition-duration: 0.4s;
 }
 
-@media only screen and (max-width: 768px) { 
-  #main {
-    margin-left: 150px;
-  }
+@media only screen and (max-width: 768px) {
+    #main {
+        margin-left: 150px;
+    }
 }
 .pagination {
-  font-size: 10px;
+    font-size: 10px;
 }
 
 #main .toggle-nav-btn:hover {
-  background-color: #555555; /* Green */
-  color: #0085A1;
+    background-color: #555555; /* Green */
+    color: #0085a1;
 }
 
 /** **/
 
 .post-preview {
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: "Ubuntu Mono", monospace;
 }
 .post-preview > a {
     color: #212529;
-  }
-  
-.post-preview > a:focus, .post-preview > a:hover {
-  text-decoration: none;
-  color: #0085A1;
+}
+
+.post-preview > a:focus,
+.post-preview > a:hover {
+    text-decoration: none;
+    color: #0085a1;
 }
 
 .post-preview > a > .post-title {
-  font-size: 30px;
-  margin-top: 30px;
-  margin-bottom: 10px;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .post-preview > a > .post-subtitle {
-  font-weight: 300;
-  margin: 0 0 10px;
+    font-weight: 300;
+    margin: 0 0 10px;
 }
 
 .post-preview > .post-meta {
-  font-size: 18px;
-  font-style: italic;
-  margin-top: 0;
-  color: #868e96;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 0;
+    color: #868e96;
 }
 
 .post-preview > .post-meta > a {
-  text-decoration: none;
-  color: #212529;
+    text-decoration: none;
+    color: #212529;
 }
 
-.post-preview > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
-  text-decoration: underline;
-  color: #0085A1;
+.post-preview > .post-meta > a:focus,
+.post-preview > .post-meta > a:hover {
+    text-decoration: underline;
+    color: #0085a1;
 }
 
 @media only screen and (min-width: 768px) {
-  .post-preview > a > .post-title {
-    font-size: 36px;
-  }
+    .post-preview > a > .post-title {
+        font-size: 36px;
+    }
 }
+
 .content {
-  font-family: 'Ubuntu Mono', monospace;
+    font-family: "Ubuntu Mono", monospace;
 }
 
 .content h1 {
-  font-family: 'Ubuntu Mono', monospace;
-  color: #45a049;
-  font-size: 30px;
-  margin-top: 30px;
-  margin-bottom: 10px;
+    font-family: "Ubuntu Mono", monospace;
+    color: #45a049;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .content h4 {
-  font-family: 'Ubuntu Mono', monospace;
-  color: #45a049;
-  font-size: 15px;
-  margin-bottom: 10px;
+    font-family: "Ubuntu Mono", monospace;
+    color: #45a049;
+    font-size: 15px;
+    margin-bottom: 10px;
 }
 
 /** About Me**/
-.bg-1 { 
-  color: #5f1d1d;
-  font-family: 'Ubuntu Mono', monospace;
+.bg-1 {
+    color: #5f1d1d;
+    font-family: "Ubuntu Mono", monospace;
 }
 
-.bg-2 { 
-  color: #5f1d1d;
-  font-family: 'Ubuntu Mono', monospace;
+.bg-2 {
+    color: #5f1d1d;
+    font-family: "Ubuntu Mono", monospace;
 }
 
 .bg-2 p {
-  color: rgb(52, 83, 102);
+    color: rgb(52, 83, 102);
 }
 
-.bg-3 { 
-  color: #5f1d1d;
-  font-family: 'Ubuntu Mono', monospace;
+.bg-3 {
+    color: #5f1d1d;
+    font-family: "Ubuntu Mono", monospace;
 }
 
 .bg-3 p {
-  color:  rgb(52, 83, 102);;
+    color: rgb(52, 83, 102);
 }
 
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: lightslategrey;
-  color: #c6cfc8;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: lightslategrey;
+    color: #c6cfc8;
 }
 
 footer p {
-  text-align: center;
-  font-family: 'Ubuntu Mono', monospace;
+    text-align: center;
+    font-family: "Ubuntu Mono", monospace;
 }
 
 /*  Contact Form */
 .contact-form {
-  border-radius: 5px;
-  background-color: darkgrey;
-  padding: 20px;
-  text-align: justify;
-  font-family: 'Ubuntu Mono', monospace;
+    border-radius: 5px;
+    background-color: darkgrey;
+    padding: 20px;
+    text-align: justify;
+    font-family: "Ubuntu Mono", monospace;
 }
 
-.contact-form input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+.contact-form input[type="text"],
+select,
+textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
 /* Style the submit button with a specific background color etc */
-.contact-form input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.contact-form input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
-.contact-form input[type=submit]:hover {
-  background-color: #45a049;
+.contact-form input[type="submit"]:hover {
+    background-color: #45a049;
 }

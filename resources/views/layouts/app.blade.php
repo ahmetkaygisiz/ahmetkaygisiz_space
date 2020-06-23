@@ -10,12 +10,16 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('css/prism.css') }}">
+    
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+
 
     <link rel="icon" type="image/png" href="{{ asset('imgs/logo.png') }}"/>
+    
     <title>ahmetkaygisiz.space</title>
 </head>
 
@@ -90,10 +94,13 @@
         </div>
     </footer>
 </div>
-
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script src="{{ asset('js/bootstrap.js') }}" ></script>
-    <script src="{{ asset('js/home.js') }}" ></script>
+    <script type="text/javascript" src="{{ asset('js/bootstrap.js') }}" ></script>
+    <script type="text/javascript" src="{{ asset('js/home.js') }}" ></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="{{ asset('js/prism.js') }}" ></script>
+
 </body>
 </html>

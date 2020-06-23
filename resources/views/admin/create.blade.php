@@ -37,10 +37,7 @@
         </div>
        
         <div class="form-group">
-            <label for="editor">Post Content</label>
-            <textarea name="content" id="editor">
-               <p>Test felan</p>
-            </textarea>
+            <textarea id="mytextarea" name="content"></textarea>
         </div>
 
         <button class="btn btn-success" type="submit" style="">Kesin bilgi yayalım...</button>

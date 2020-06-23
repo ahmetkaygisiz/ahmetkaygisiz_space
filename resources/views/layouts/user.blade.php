@@ -10,10 +10,8 @@
   <!-- Styles -->
   <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/prism.css') }}">
   
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-
   <title>This is my bLOGGGG!!!</title>
 </head>
 
@@ -85,20 +83,37 @@
 
 
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript" src="{{ asset('js/bootstrap.js') }}" ></script>
-  <script type="text/javascript" src="{{ asset('js/home.js') }}" ></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{ asset('js/bootstrap.js') }}" ></script>
+<script type="text/javascript" src="{{ asset('js/home.js') }}" ></script>
+<script type="text/javascript" src="{{ asset('js/prism.js') }}" ></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
-<script src="https://cdn.ckeditor.com/ckeditor5/12.3.1/classic/ckeditor.js"></script>
 <script>
-	ClassicEditor
-		.create( document.querySelector( '#editor' ) )
-		.then( editor => {
-			window.editor = editor;
-		} )
-		.catch( error => {
-			console.error( 'There was a problem initializing the editor.', error );
-		} );
+
+tinymce.init({
+  selector: 'textarea',
+  height: 500,
+  plugins: [
+    "advlist autolink lists link image charmap print preview anchor",
+    "searchreplace visualblocks code fullscreen",
+    "insertdatetime media table paste imagetools wordcount codesample"
+  ],
+  toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | codesample",
+  codesample_languages: [
+    { text: 'HTML/XML', value: 'markup' },
+    { text: 'Bash', value: 'bash' },
+    { text: 'CSS', value: 'css' },
+    { text: 'PHP', value: 'php' },
+    { text: 'Python', value: 'python' },
+    { text: 'Java', value: 'java' },
+    { text: 'C', value: 'c' },
+    { text: 'SQL', value: 'sql' }  
+  ],
+  content_css: '//www.tiny.cloud/css/codepen.min.css'
+});
+
 </script>
+
   </body>
 </html> 
