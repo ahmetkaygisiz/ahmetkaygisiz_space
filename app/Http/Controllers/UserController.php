@@ -14,7 +14,7 @@ class UserController extends Controller
 
     public function index()
     {  
-        $posts = Post::all();
+        $posts = Post::orderBy("created_at","asc");
 
         return view('admin.home',compact('posts'));
     }

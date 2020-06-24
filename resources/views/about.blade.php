@@ -9,18 +9,16 @@
     
     <div class="container-fluid bg-2 text-center">
     <h3>Kimim ben?</h3>
-    <p>Selamlar, Ben Ahmet. Kod dünyasına giriş yapmaya çalışan bir Junior'ım.
-         Java ve Linux sevdiğim şeyler arasında. Bu blog içerisinde kendime not şeklinde
-        ilerleyeceğim. Hatalarım mutlaka olacaktır bu sebepte    
+    <p>Selamlar, Ben Ahmet. Kod dünyasında 'başkanım ben da varım' demek için geldim buraya.Java ve Linux sevdiğim şeyler arasında. Spring Boot şu sıralar uğraşlarım içerisinde. Scala ve Python da kısa zaman içerisinde uğraşlarım arasına girecek.
     </p>
     </div>
     <hr>
     
     <div class="container-fluid bg-3 text-center">
     <h3>Neler yaparım?</h3>
-    <p>Bir önceki işimde 'Jr. Java Developer & System Support Associate' olarak görev aldım. Uygulama sunucuları ve java ile çalıştım. Ağırlıklı olarak
-        WebLogic ve Scripting üzerinde çalışsam da yoluma sunucular yerine kodlama alanında daha aktif olmak istiyorum. 
-        Python ve Scala üzerine çalışmak istediğim konulardan bazıları. 
+    <p>Bir önceki işimde 'Jr. Java Developer & System Support Associate' olarak görev aldım. Uygulama sunucuları ve java ile çalıştım. Oracle WebLogic Application Server, Oracle Internet Directory, Oracle Service Bus, GitLab, Confluence, Jira yönetimlerinde görev aldım.Java Secure Channel(JSch) ile remote sunuculara bağlantı kurup log dosyalarının okunmasını,sıkıştırılmasını ve indirilebilmesini sağlayan bir java kütüphanesi hazırladım. Ağırlıklı olarak WebLogic ve Scripting üzerinde çalışsam da yoluma, sunucular yerine kod tarafında daha aktif olmak istiyorum.
+
+
     </p>
     </div>
     <hr>

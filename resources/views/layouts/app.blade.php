@@ -44,9 +44,9 @@
                     </li>   
                     @endif
                     
-                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li><a href="{{ url('/') }}">Blog</a></li>
                     <li>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categories</a>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Kategoriler</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
                             @foreach($categories as $category)
                                 <li>
@@ -56,7 +56,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="{{ url('/about') }}">About</a>
+                        <a href="{{ url('/about') }}">Hu em ay?</a>
                     </li>
                 </ul>
             </div>

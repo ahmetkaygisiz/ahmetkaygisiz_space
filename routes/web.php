@@ -19,7 +19,7 @@ use App\Mail\ContactMail;
 Auth::routes();
 
 Route::get('/', function () {
-    $posts = Post::paginate(5);
+    $posts = Post::orderBy("created_at","desc")->paginate(5);
 
     return view('index',compact('posts'));
 })->name('index');
