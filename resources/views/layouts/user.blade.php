@@ -12,14 +12,14 @@
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/prism.css') }}">
   
-  <title>This is my bLOGGGG!!!</title>
+  <title>Home Sweet Home</title>
 </head>
 
 <body>
     <div id="mySidenav" class="sidenav">
       <div class="container">
         <div class="mHeader">
-          <h5>Ahmet Kaygısız</h5>
+          <h5> < ahmet kaygisiz /> </h5>
         </div>  
       </div>
       <hr>
@@ -31,7 +31,7 @@
                   <a  href="{{ url('/admin') }}">Panel</a>
                 </li>   
                 <li>
-                    <a  href="{{ url('/') }}">Home</a>
+                    <a  href="{{ url('/') }}"> 127.0.0.1 </a>
                 </li>
                 <li>
                   <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Post</a>
@@ -45,7 +45,7 @@
                   </ul>
                 </li>
                 <li>
-                    <a  href="{{ url('/') }}">Stats</a>
+                    <a  href="{{ url('/') }}">Stats / Kaming Suun</a>
                 </li>
               </ul>
           </div>

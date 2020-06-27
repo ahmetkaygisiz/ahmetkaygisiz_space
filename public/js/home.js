@@ -13,7 +13,6 @@ function closeNav() {
 
 function toggleNav() {
     state = localStorage.getItem("navWidth");
-    console.log("Tıklandım...");
 
     if (state == 0) {
         return openNav();

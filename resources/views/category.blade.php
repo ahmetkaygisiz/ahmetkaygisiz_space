@@ -3,7 +3,7 @@
 
 <!-- Main Content -->
 <div class="content" style="padding-left: 35px;">
-    <h2>Post List</h2>
+    <h3 style="padding-top: 20px;">Gönderi Listesi</h3>
     
     @foreach($filtered_posts as $post)
       <div class="container">

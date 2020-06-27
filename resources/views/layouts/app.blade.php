@@ -29,7 +29,7 @@
         <!-- Header -->
         <div class="container">
             <div class="mHeader">
-                <h5>Ahmet Kaygısız</h5>
+                <h5>< ahmet kaygisiz /></h5>
             </div>  
         </div>
         <hr>
@@ -44,7 +44,7 @@
                     </li>   
                     @endif
                     
-                    <li><a href="{{ url('/') }}">Blog</a></li>
+                    <li><a href="{{ url('/') }}">Ana Sayfa</a></li>
                     <li>
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Kategoriler</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
