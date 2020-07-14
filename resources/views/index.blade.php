@@ -7,15 +7,15 @@
       <div class="container">
         <div class="row">
           <div class="post-preview">
-              <a href="{{ route('home.post',$post->id)}}">
+              <a href="{{ route('home.post', $post)}}">
               <h5 class="post-title">
-                {{$post->title}}
+                {{ $post->title}}
               </h5>
               <h6 class="post-subtitle">
                 {{$post->subtitle}}
               </h6>
             </a>
-            <p class="post-meta">on  {{$post->created_at}}</p>
+            <p class="post-meta">yayınlanma tarihi : {{$post->created_at}}</p>
           </div>
           <hr>
         </div>

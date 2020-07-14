@@ -9,7 +9,7 @@
                 <- Geri
             </a>
             <br />
-            <h1>{{$post->title}}</h1>
+            <h1>{{ $post->title}}</h1>
             <h4>posted on {{$post->created_at}}</h4>
             {!! $post-> content !!}
         </div>

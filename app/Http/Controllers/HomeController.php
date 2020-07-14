@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Post;
 
@@ -32,9 +34,8 @@ class HomeController extends Controller
         return view('post');
     }
 
-    public function showPost($id)
+    public function showPost(Post $post)
     {
-        $post = Post::find($id);
         if(empty($post)) 
             abort(404);
         return view('post', compact('post')); 

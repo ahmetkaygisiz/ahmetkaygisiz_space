@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Post;
 
 class PostController extends Controller
@@ -36,6 +37,7 @@ class PostController extends Controller
         $post = new Post([
             'category_id'   => $request->get('category_id'),
             'title'         => $request->get('title'),
+            'url'           => str_slug($request->get('title')),
             'subtitle'      => $request->get('subtitle'),
             'content'       => $request->get('content')
         ]);
@@ -50,14 +52,12 @@ class PostController extends Controller
      
     }
 
-    public function edit($id)
+    public function edit(Post $post)
     {
-        $post = Post::find($id);
-
         return view('admin.edit', compact('post')); 
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
         $request->validate([
             'title'     =>'required',
@@ -65,10 +65,10 @@ class PostController extends Controller
             'category_id'=>'required',
             'content'   =>'required'
         ]);
-            
-        $post = Post::find($id);
+        
         $post->title        = $request->get('title');
         $post->subtitle     = $request->get('subtitle');
+        $post->url          = str_slug($request->get('title'));
         $post->category_id  = $request->get('category_id');
         $post->content      = $request->get('content');
         
@@ -77,9 +77,8 @@ class PostController extends Controller
         return redirect('/admin/post')->with('success','Post updated.');
     }
 
-    public function destroy($id)
+    public function destroy(Post $post)
     {
-        $post = Post::find($id);
         $post->delete();
 
         return redirect('/admin')->with('success', 'Post deleted!');

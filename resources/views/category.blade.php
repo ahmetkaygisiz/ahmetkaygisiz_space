@@ -8,7 +8,7 @@
     @foreach($filtered_posts as $post)
       <div class="container">
         <div class="row">
-              <a href="{{ route('home.post',$post->id)}}">
+              <a href="{{ route('home.post',$post)}}">
                 <h5 class="post-title">
                   {{$post->title}}
                 </h5>

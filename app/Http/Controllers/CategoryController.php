@@ -48,6 +48,7 @@ class CategoryController extends Controller
     public function show($id)
     {
         $filtered_posts = Post::where('category_id','=',$id)->get();
+        
         return view('category', compact('filtered_posts'));
 
     }

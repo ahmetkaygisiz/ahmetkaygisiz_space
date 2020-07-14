@@ -27,10 +27,10 @@
                 <td>{{$post->subtitle}}</td>
                 <td>{{$post->created_at}}</td>
                 <td>
-                    <a href="{{ route('post.edit', $post->id)}}" class="btn btn-primary">Edit</a>
+                    <a href="{{ route('post.edit', $post)}}" class="btn btn-primary">Edit</a>
                 </td>
                 <td>
-                    <form action="{{ route('post.destroy', $post->id)}}" method="post">
+                    <form action="{{ route('post.destroy', $post)}}" method="post">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-danger" type="submit">Delete</button>
