@@ -31,8 +31,12 @@ div hr {
 }
 
 @media only screen and (max-width: 768px) {
+    .mHeader h5 {
+        font-size: 11px;
+    }
+
     .sidenav {
-        width: 150px;
+        width: 100px;
         height: 100%;
         position: fixed;
         z-index: 1;
@@ -45,7 +49,7 @@ div hr {
     }
 
     .sidenav.active {
-        margin-left: -150px;
+        margin-left: -100px;
     }
 }
 
@@ -62,6 +66,7 @@ div hr {
 @media only screen and (max-width: 768px) {
     .sidenav a {
         padding: 4px 4px 4px 4px;
+        font-size: 11px;
     }
 }
 
@@ -113,7 +118,7 @@ div hr {
     }
 
     #pageSubmenu a {
-        font-size: 12px;
+        font-size: 10px;
         padding: 2px 2px 2px 15px;
         color: #45a049;
     }
@@ -141,9 +146,14 @@ div hr {
 
 @media only screen and (max-width: 768px) {
     #main {
-        margin-left: 150px;
+        margin-left: 100px;
+    }
+
+    #main .toggle-nav-btn {
+        font-size: x-small;
     }
 }
+
 .pagination {
     font-size: 10px;
 }
@@ -222,6 +232,43 @@ div hr {
     margin-bottom: 10px;
 }
 
+.content p {
+    font-size: 15px;
+}
+
+.content pre {
+    font-size: normal;
+}
+
+@media only screen and (max-width: 768px) {
+    .content h1 {
+        font-size: 15px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    .content a {
+        font-size: xx-small;
+    }
+
+    .content ul {
+        font-size: 10px;
+    }
+
+    .content h4 {
+        font-size: 12px;
+    }
+
+    .content p {
+        font-size: 10px;
+    }
+
+    .content pre > code {
+        font-size: 10px;
+    line-height: 0.8;
+    }
+}
+
 /** About Me**/
 .bg-1 {
     color: #5f1d1d;
@@ -260,6 +307,11 @@ footer p {
     font-family: "Ubuntu Mono", monospace;
 }
 
+@media only screen and (max-width: 768px) {
+    footer p {
+        font-size: 11px;
+    }
+}
 /*  Contact Form */
 .contact-form {
     border-radius: 5px;

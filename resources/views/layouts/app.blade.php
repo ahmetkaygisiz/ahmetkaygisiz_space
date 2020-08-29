@@ -44,9 +44,9 @@
                     </li>   
                     @endif
                     
-                    <li><a href="{{ url('/') }}">Ana Sayfa</a></li>
+                    <li><a href="{{ url('/') }}">cd ~</a></li>
                     <li>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Kategoriler</a>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">ls ~/categories</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
                             @foreach($categories as $category)
                                 <li>
@@ -56,7 +56,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="{{ url('/about') }}">Hu em ay?</a>
+                        <a href="{{ url('/about') }}">whoami</a>
                     </li>
                 </ul>
             </div>
