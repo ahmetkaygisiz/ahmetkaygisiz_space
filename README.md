@@ -1,4 +1,4 @@
-<p align="center"><img src="https://ahmetkaygisiz.space/imgs/website.jpeg" width="400"></p>
+<p align="center"><img src="https://ahmetkaygisiz.space/imgs/website.jpeg" width="800"></p>
 
 ## About My Blog
 I share what I have learned and what I have done. I created it using Laravel, Mysql and Bootstrap.
