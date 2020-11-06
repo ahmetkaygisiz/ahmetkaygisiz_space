@@ -2,28 +2,31 @@
 @section('content')
 
 <!-- Main Content -->
-  <div class="content" style="padding-left: 35px;">
+  <div class="content">
     @foreach($posts as $post)
       <div class="container">
         <div class="row">
-          <div class="post-preview">
-              <a href="{{ route('home.post', $post)}}">
-              <h5 class="post-title">
+          <div class="post-preview mx-auto col-md-10">
+              <a href="{{ route('home.post', $post)}}" class="indexpost-link">
+              <div class="indexpost-title">
                 {{ $post->title}}
-              </h5>
-              <h6 class="post-subtitle">
+              </div>
+              <div class="indexpost-subtitle">
                 {{$post->subtitle}}
-              </h6>
+              </div>
             </a>
-            <p class="post-meta">yayınlanma tarihi : {{$post->created_at}}</p>
+            <p class="indexpost-info">yayınlanma tarihi : {{$post->created_at->format('yy M d')}}</p>
           </div>
-          <hr>
         </div>
      </div>
     @endforeach
     
-  <div class="pagination" style="margin-left: auto; margin-right:auto; width:1px; font-size:10px;"> 
-      {{ $posts->links() }}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        {{ $posts->links("pagination::bootstrap-4") }}
+      </div>
+    </div>
   </div>
 </div>
 @endsection
