@@ -1,12 +1,9 @@
 @extends('layouts.user')
 @section('content')
 <!-- Main Content -->
-<div class="content" style="padding-left: 35px;">
-<div class="container">    
+<div class="container-fluid">    
     <div class="row">
     <div class="col-sm-12">
-    
-    <h3 class="display-3">Post List</h3>   
 
     <table class="table table-striped">
         <thead>
@@ -51,9 +48,16 @@
     <div>
         <a style="margin: 19px;" href="{{ url('/admin/post/create') }}" class="btn btn-primary">New post</a>
     </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                {{ $posts->links("pagination::bootstrap-4") }}
+            </div>
+        </div>
+    </div>
 
     <div>
-    </div>
-    </div>
+</div>
 </div>
 @endsection

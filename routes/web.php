@@ -29,7 +29,7 @@ Route::get('/about', 'HomeController@about')->name('about');
 Route::get('/admin','UserController@index')->name('user');
 Route::group(['prefix' => 'admin/post','middleware' => ['auth']], function (){
     Route::get('/', function (){
-        $posts = Post::all();
+        $posts = Post::orderBy("created_at","desc")->paginate(10);
 
         return view('admin.home',compact('posts'));
     })->name('post.index');

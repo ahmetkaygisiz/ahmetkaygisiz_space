@@ -14,6 +14,8 @@
                 <p>Kendimi geliştirmek için bol bol proje fikirleri üretip, gerçeğe dönüştürmek için çalışıyorum. Blog tutmanın,insanı yeni şeyler öğrenmeye teşvik edeceğini de düşünerek bu blogu Laravel ile oluşturdum. Ağırlıklı olarak Java-Spring boot temelli projeler geliştirsem de sabit birşeyde takılı kalmadan, yeni teknolojilerle gelişmeye çalışıyorum.</p>
                 <p>Bir önceki işimde 'Jr. Java Developer & System Support Associate' olarak görev aldım. Uygulama sunucuları ve java ile çalıştım. Oracle WebLogic Application Server, Oracle Internet Directory, Oracle Service Bus, GitLab, Confluence, Jira yönetimlerinde görev aldım. Ağırlıklı olarak WebLogic ve Scripting üzerinde çalışsam da sunucular yerine kod tarafında daha aktif olmak istiyorum.
                 </p>
+
+                <p><a href="https://ahmetkaygisiz.github.io"><h3>Online CV</h3></a></p>
             </div>
         </div>
     </div>

@@ -1,60 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE-edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/prism.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/all.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/prism.css') }}">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   
-  <title>Home Sweet Home</title>
+    <link rel="icon" type="image/png" href="{{ asset('imgs/logo.png') }}"/>
 </head>
 
 <body>
-    <div id="mySidenav" class="sidenav">
-      <div class="container">
-        <div class="mHeader">
-          <h5> < ahmet kaygisiz /> </h5>
-        </div>  
-      </div>
-      <hr>
-
-      <div class="container">
-          <div class="navbar-links">
-              <ul class="list-unstyled components mb-5">
-                <li>
-                  <a  href="{{ url('/admin') }}">Panel</a>
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg px-10 fixed-top">
+          <a href="{{ url('/') }}" class="navbar-brand">127.0.0.1</a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="toggler-icon">
+              <i class="fas fa-bars"></i>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="navbar-nav mx-auto">
+              @if (Auth::check())
+                <li class="nav-item active mx-4">
+                  <a href="{{ url('/admin') }}" class="nav-link">Panel</a>
                 </li>   
-                <li>
-                    <a  href="{{ url('/') }}"> 127.0.0.1 </a>
-                </li>
-                <li>
-                  <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Post</a>
-                  <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li>
-                        <a href="{{ url('/admin/post/create') }}" style="font-size: small; color:burlywood">Oluştur</a>
+              @endif
+              <li class="nav-item active mx-4">
+                <a href="{{ url('/') }}" class="nav-link">cd ~</a>
+              </li>
+              <li class="nav-item dropdown active mx-4">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="true"
+                  >ls ~/posts</a
+                >
+                <ul class="dropdown-menu">
+                    <li class="nav-item">
+                       <a href="{{ url('/admin/post/create') }}" style="font-size: small; color:burlywood">Oluştur</a>
                     </li>
-                    <li>
-                        <a href="{{ url('/admin/post/') }}" style="font-size: small; color:burlywood;">Listele</a>
+                    <li class="nav-item">
+                      <a href="{{ url('/admin/post/') }}" style="font-size: small; color:burlywood;">Listele</a>
                     </li>
-                  </ul>
-                </li>
-                <li>
-                    <a  href="{{ url('/') }}">Stats / Kaming Suun</a>
-                </li>
-              </ul>
-          </div>
-      </div>
-      <hr>
-
-     <div class="container">
-      <div class="social-links">
-          <a class="dropdown-item" href="{{ route('logout') }}"
+                </ul>
+              </li>
+              <li class="nav-item active mx-4">
+                <a href="{{ url('/about') }}" class="nav-link">whoami</a>
+              </li>
+              <li class="nav-item active mx-4">
+              <a class="nav-link" href="{{ route('logout') }}"
               onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
               {{ __('Logout') }}
@@ -63,58 +74,74 @@
           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
               @csrf
           </form>
-      </div>
-     </div>
-    </div>
-
-    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-    <div id="main">
-      <button id="toggleNavBtn" class="toggle-nav-btn" onclick="toggleNav()"> <b>\-.-/</b></button>
+          </li>
+          </a>
+              </li>
+            </ul>
+            <div class="nav-info-item mx-5">
+              <!-- single info -->
+              <div
+                class="nav-info align-items-center d-flex justify-content-between"
+              >
+                <span class="social-icons mx-3">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span class="social-icons mx-3">
+                  <i class="fab fa-linkedin-in"></i>
+                </span>
+                <span class="social-icons mx-3">
+                  <i class="fab fa-twitter"></i>
+                </span>
+                <span class="social-icons mx-3">
+                  <i class="fab fa-medium"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- end of nav-->
         @yield('content')
-      <hr>
-    </div>
-      <!-- Footer -->
-      <footer>
-        <div class="container">
-            <p>Copyright &copy; ahmetkaygisiz.space 2020</p>
+    
+    <!-- footer -->
+    <div class="footer py-5">
+      <footer class="page-footer font-small footer fixed-bottom">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-1">© 2020 Copyright:
+          <strong> ahmetkaygisiz.space</strong>
         </div>
+        <!-- Copyright -->
       </footer>
-      
+    <!-- end of footer -->
+    </div>
     </div>
 
-
-  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript" src="{{ asset('js/bootstrap.js') }}" ></script>
-<script type="text/javascript" src="{{ asset('js/home.js') }}" ></script>
-<script type="text/javascript" src="{{ asset('js/prism.js') }}" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/bootstrap.js') }}" ></script>
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-
-<script>
-
-tinymce.init({
-  selector: 'textarea',
-  height: 500,
-  plugins: [
-    "advlist autolink lists link image charmap print preview anchor",
-    "searchreplace visualblocks code fullscreen",
-    "insertdatetime media table paste imagetools wordcount codesample"
-  ],
-  toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | codesample",
-  codesample_languages: [
-    { text: 'HTML/XML', value: 'markup' },
-    { text: 'Bash', value: 'bash' },
-    { text: 'CSS', value: 'css' },
-    { text: 'PHP', value: 'php' },
-    { text: 'Python', value: 'python' },
-    { text: 'Java', value: 'java' },
-    { text: 'C', value: 'c' },
-    { text: 'SQL', value: 'sql' }  
-  ],
-  content_css: '//www.tiny.cloud/css/codepen.min.css'
-});
-
-</script>
+    <script src="{{ asset('js/prism.js') }}" ></script>
+  <script>
+  tinymce.init({
+    selector: 'textarea',
+    height: 500,
+    plugins: [
+      "advlist autolink lists link image charmap print preview anchor",
+      "searchreplace visualblocks code fullscreen",
+      "insertdatetime media table paste imagetools wordcount codesample"
+    ],
+    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | codesample",
+    codesample_languages: [
+      { text: 'HTML/XML', value: 'markup' },
+      { text: 'Bash', value: 'bash' },
+      { text: 'CSS', value: 'css' },
+      { text: 'PHP', value: 'php' },
+      { text: 'Python', value: 'python' },
+      { text: 'Java', value: 'java' },
+      { text: 'C', value: 'c' },
+      { text: 'SQL', value: 'sql' }  
+    ],
+    content_css: '//www.tiny.cloud/css/codepen.min.css'
+  });
+  </script>
 
   </body>
 </html> 

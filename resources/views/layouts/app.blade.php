@@ -40,11 +40,11 @@
           </button>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="navbar-nav mx-auto">
-              @if (Auth::check())
+               @if (Auth::check())
                 <li class="nav-item active mx-4">
-                  <a href="{{ url('/admin') }}">Panel</a>
-                </li>   
-              @endif
+                  <a href="{{ url('/admin') }}" class="nav-link">Panel</a>
+                  </li>   
+                @endif
               <li class="nav-item active mx-4">
                 <a href="{{ url('/') }}" class="nav-link">cd ~</a>
               </li>

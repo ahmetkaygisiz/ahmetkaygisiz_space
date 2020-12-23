@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 
 /* global  */
 :root {
@@ -11,22 +12,18 @@
     --mainRed: #f94144;
     --queenBlue: #577590;
     --zomp: #43aa8b;
-    --navbarColor: #343a40;
+    --navbarColor: beige;
 }
 
 body {
     font-family: "Share Tech Mono", monospace;
-    background: rgb(116, 129, 141);
-    background: linear-gradient(
-        270deg,
-        rgba(116, 129, 141, 1) 0%,
-        rgba(91, 101, 111, 1) 100%
-    );
+    background-color: beige !important;
     color: var(--mainBlack);
 }
 
 /** Navigation Bar **/
 .navbar {
+    background-color: beige !important;
     margin-bottom: 10vh;
 }
 
@@ -37,7 +34,7 @@ body {
 }
 
 .navbar-brand:hover {
-    color: var(--yellowTrans) !important;
+    color: var(--yellowOrange) !important;
 }
 
 /* nav links */
@@ -93,9 +90,7 @@ body {
 
 .indexpost-title {
     font-size: 1.5rem;
-    color: var(--navbarColor);
-    text-shadow: 1px 1px var(--mainBlack);
-    transition: all 0.2s ease;
+    color: darkslategrey;
 }
 
 .indexpost-title:hover {
@@ -121,7 +116,7 @@ body {
 /* postpage */
 .postpage-title {
     font-size: 1.5rem;
-    color: var(--navbarColor);
+    color: darkslategrey;
     text-shadow: 0px 1px var(--queenBlue);
     transition: all 0.2s ease;
 }
@@ -195,9 +190,14 @@ li.page-item.disabled {
 }
 
 .page-link {
+    color: black !important;
     background-color: var(--navbarColor) !important;
     border-color: gray !important;
     border-radius: 0.25rem;
+}
+
+.page-link.active {
+    color: var(--mainGreen) !important;
 }
 
 .page-footer {
